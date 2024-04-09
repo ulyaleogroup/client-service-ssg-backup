@@ -25,7 +25,7 @@ const TransactionDetail = () => {
   const [page, setPage] = useState(1);
 
   const { data, error } = useSWR(
-    `http://localhost:3000/api/transactions?page=${page}`,
+    `${window.location.origin}/api/transactions?page=${page}`,
     fetcher
   );
 
